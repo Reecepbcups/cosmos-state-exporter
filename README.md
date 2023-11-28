@@ -1,6 +1,6 @@
-# Cosmos State Exports
+# Cosmos State Exporter
 
-A service to export the state of CosmosSDK chain nodes.
+A scheduled service to export the genesis state of Cosmos-SDK chain nodes.
 
 **Pairs with** - https://github.com/Reecepbcups/exports-api
 
