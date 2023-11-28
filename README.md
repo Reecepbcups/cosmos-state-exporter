@@ -29,8 +29,8 @@ sudo crontab -e
 # if you run the node as root, but interact with a user account.
 
 # Run All:
-0 2 * * * sudo /usr/bin/python3 /home/user/snapshot.py
+0 2 * * * sudo /usr/bin/python3 /home/user/cosmos-state-exporter/snapshot.py
 
 # OR Run specific
-0 2 * * * sudo /usr/bin/python3 /home/user/snapshot.py gaia,juno,terra...
+0 2 * * * sudo /usr/bin/python3 /home/user/cosmos-state-exporter/snapshot.py gaia,juno,terra...
 ```
