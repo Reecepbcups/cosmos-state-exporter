@@ -1,13 +1,13 @@
 {
     "chains": [
         {
-            "service_name": "gaia",
-            "home_dir": "/home/ubuntu/.gaia",
-            "binary_path": "/home/ubuntu/go/bin/gaiad",
-            "rpc_addr": "http://localhost:26757",
+            "service_name": "stargaze",
+            "home_dir": "/home/ubuntu/.starsd",
+            "binary_path": "/home/ubuntu/go/bin/starsd",
+            "rpc_addr": "http://localhost:27657",
             "requested_modules": [],
-            "height_per_snapshot": 50000,
-            "export_pipe_symbol": ">"
+            "height_per_snapshot": 20000,
+            "export_pipe_symbol": "2>&1 | sudo tee"
         },
         {
             "service_name": "juno",
