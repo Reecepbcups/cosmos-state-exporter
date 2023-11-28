@@ -1,0 +1,4 @@
+__pycache__
+debug.log
+last_snapshots/*.txt
+config.json
