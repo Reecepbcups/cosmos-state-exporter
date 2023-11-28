@@ -91,9 +91,12 @@ class Blockchain:
         file = f"{cfg.snapshot_storage_dir}/{self.name}/export_{export_height}.json"
         os.makedirs(os.path.dirname(file), exist_ok=True)
 
-        cmd = f"sudo {self.bin} export --height {export_height} --home {self.home_dir} {export_symbol} {file}"
+        cmd = f"sudo {self.bin} export --height {export_height} --home {self.home_dir}"
         if len(MODULES) > 0:  # SDK v46+ specific support
             cmd += f" --modules-to-export {','.join(MODULES)}"
+
+        # export
+        cmd += f" {export_symbol} {file}"
 
         debug(cmd)
         os.system(cmd)
