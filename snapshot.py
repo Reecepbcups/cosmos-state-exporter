@@ -12,9 +12,8 @@ import sys
 from typing import List
 
 from blockchain_service import Blockchain
+from config import load_config
 from export_utils import debug, sort_and_save_to_file
-
-from .config import load_config
 
 # load the config from the file
 cfg = load_config()

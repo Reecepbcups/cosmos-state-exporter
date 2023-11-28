@@ -4,9 +4,8 @@ import time
 from typing import List
 
 import requests
+from config import load_config
 from export_utils import current_dir, debug, timer_func
-
-from .config import load_config
 
 last_snapshots_dir = os.path.join(current_dir, "last_snapshots")
 os.makedirs(last_snapshots_dir, exist_ok=True)
@@ -92,7 +91,7 @@ class Blockchain:
         file = f"{cfg.snapshot_storage_dir}/{self.name}/export_{export_height}.json"
         os.makedirs(os.path.dirname(file), exist_ok=True)
 
-        cmd = f"{self.bin} export --height {export_height} --home {self.home_dir} {export_symbol} {file}"
+        cmd = f"sudo {self.bin} export --height {export_height} --home {self.home_dir} {export_symbol} {file}"
         if len(MODULES) > 0:  # SDK v46+ specific support
             cmd += f" --modules-to-export {','.join(MODULES)}"
 
